@@ -1,7 +1,7 @@
 {
-  "name": "solana-advanced-connection",
-  "description": "Solana Connection with fallback to other RPCs",
-  "version": "1.1.0",
+  "name": "@quartz-labs/connection",
+  "description": "Advanced Solana Connection with fallback to other RPCs",
+  "version": "2.0.0",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -9,24 +9,40 @@
   "files": [
     "dist"
   ],
-  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pyra-labs/solana-advanced-connection.git"
   },
+  "keywords": [
+    "solana",
+    "connection",
+    "rpc",
+    "fallback"
+  ],
+  "author": "Quartz Labs",
+  "license": "MIT",
+  "bugs": {
+    "email": "iarla@quartzpay.io"
+  },
+  "homepage": "https://quartzpay.io",
   "scripts": {
     "lint": "yarn biome lint --write",
     "build": "yarn install && yarn lint && tsc -p tsconfig.json",
-    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
-    "doc": "yarn typedoc",
-    "deploy": "yarn build && yarn test && yarn publish && yarn doc"
+    "deploy": "yarn build && yarn publish"
   },
   "dependencies": {
     "@solana/web3.js": "1.98.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.29",
     "@biomejs/biome": "1.9.4",
+    "@types/node": "^17.0.29",
     "typescript": "^5.7.2"
   }
 }
