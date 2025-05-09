@@ -1,5 +1,5 @@
-import Strategy from "../strategy";
-import {Connection} from "@solana/web3.js";
+import type Strategy from "../strategy.js";
+import type { Connection } from "@solana/web3.js";
 
 export class Random implements Strategy {
   private connections: Connection[];
@@ -19,13 +19,16 @@ export class Random implements Strategy {
         return null;
       }
 
-      const rand = Math.floor(Math.random()*this.available.length)
+      const rand = Math.floor(Math.random() * this.available.length)
       const randomKey = this.available[rand];
-      const con = this.connections[randomKey];
+      if (!randomKey) throw new Error("Invalid random key found");
+
+      const connection = this.connections[randomKey];
+      if (!connection) throw new Error("Invalid connection found");
 
       this.available.splice(rand, 1);
 
-      yield con;
+      yield connection;
     }
   }
 }

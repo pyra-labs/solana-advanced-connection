@@ -1,0 +1,1 @@
+{"version":3,"file":"random.d.ts","sourceRoot":"","sources":["../../src/strategy/random.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,QAAQ,MAAM,gBAAgB,CAAC;AAC3C,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAElD,qBAAa,MAAO,YAAW,QAAQ;IACrC,OAAO,CAAC,WAAW,CAAe;IAClC,OAAO,CAAC,SAAS,CAAgB;gBAErB,WAAW,EAAE,UAAU,EAAE;IAIrC,KAAK;IAIJ,aAAa,IAAI,gBAAgB,CAAC,UAAU,CAAC;CAkB/C"}

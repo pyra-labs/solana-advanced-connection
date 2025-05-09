@@ -1,5 +1,5 @@
-import Strategy from "../strategy";
-import {Connection} from "@solana/web3.js";
+import type Strategy from "../strategy.js";
+import type { Connection } from "@solana/web3.js";
 
 export class RoundRobin implements Strategy {
   private connections: Connection[];
@@ -25,11 +25,12 @@ export class RoundRobin implements Strategy {
         return null;
       }
 
-      const con = this.connections[this.next];
+      const connection = this.connections[this.next];
+      if (!connection) throw new Error("Invalid connection found");
       this.next++;
       this.triedConnections++;
 
-      yield con;
+      yield connection;
     }
   }
 }

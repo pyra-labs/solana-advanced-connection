@@ -1,0 +1,1 @@
+{"version":3,"file":"sequential.d.ts","sourceRoot":"","sources":["../../src/strategy/sequential.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,QAAQ,MAAM,gBAAgB,CAAC;AAC3C,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAElD,qBAAa,UAAW,YAAW,QAAQ;IACzC,OAAO,CAAC,WAAW,CAAe;IAClC,OAAO,CAAC,IAAI,CAAK;gBAEL,WAAW,EAAE,UAAU,EAAE;IAIrC,KAAK;IAIJ,aAAa,IAAI,gBAAgB,CAAC,UAAU,CAAC;CAa/C"}

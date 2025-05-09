@@ -1,0 +1,6 @@
+import type { Connection } from "@solana/web3.js";
+export default interface Strategy {
+    start(): void;
+    getConnection(): IterableIterator<Connection>;
+}
+//# sourceMappingURL=strategy.d.ts.map
